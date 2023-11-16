@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SingleCard from '../SingleCard/SingleCard';
 
 const Home = () => {
+    const [blogs,setBlogs] = useState([]);
+
+    useEffect(()=>{
+        fetch('data.json')
+        .then(res => res.json())
+        .then(data => setBlogs(data))
+    },[])
     return (
-        <div>
-            <h2>home is here </h2>
-        </div>
+        <>
+            <div className="blogs-container">
+                {
+                    blogs.map((blog)=> <SingleCard blog={blog}></SingleCard>)
+                }
+            </div>
+        </>
     );
 };
 

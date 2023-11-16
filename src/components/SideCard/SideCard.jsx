@@ -2,8 +2,8 @@ import React from 'react';
 
 const SideCard = () => {
     return (
-        <div>
-            <h2>Side card here </h2>
+        <div className='mt-5 px-2'>
+            <h4>Spent time on read : </h4>
         </div>
     );
 };
