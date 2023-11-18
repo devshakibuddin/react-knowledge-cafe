@@ -5,7 +5,7 @@
       "BlogTitle": "How to get your first job as a self-taught programmer",
       "Image": "https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?w=900&t=st=1700160956~exp=1700161556~hmac=c2f9be46cafdae3bc10777f2dc357655b0fe2f0addc2674643e073eaaf203030",
       "AuthorImage": "https://img.freepik.com/premium-photo/man-office-work-time_917213-13787.jpg?w=740",
-      "ReadTime": "05 min read",
+      "ReadTime": "05",
       "PublishDate": "November 14 (4 Days ago)",
       "Tag":"#beginners #programming"
     },
@@ -15,7 +15,7 @@
         "BlogTitle": "How to get your second job as a self-taught programmer",
         "Image": "https://img.freepik.com/premium-photo/various-computer-equipment-with-programming-code-screens-table-dark-room-cyber-security-concept-copy-space_236854-23136.jpg?size=626&ext=jpg&ga=GA1.1.644786062.1673853892&semt=sph",
         "AuthorImage": "https://img.freepik.com/premium-photo/man-office-work-time_917213-13787.jpg?w=740",
-        "ReadTime": "10 min read",
+        "ReadTime": "10",
         "PublishDate": "November 18 (9 Days ago)",
         "Tag":"#beginners #programming"
       },
@@ -25,7 +25,7 @@
         "BlogTitle": "How to get your third job as a self-taught programmer",
         "Image": "https://img.freepik.com/free-photo/html-system-website-concept_23-2150376770.jpg?size=626&ext=jpg&ga=GA1.1.644786062.1673853892&semt=sph",
         "AuthorImage": "https://img.freepik.com/premium-photo/man-office-work-time_917213-13787.jpg?w=740",
-        "ReadTime": "12 min read",
+        "ReadTime": "12",
         "PublishDate": "November 22 (14 Days ago)",
         "Tag":"#beginners #programming"
       },
@@ -35,7 +35,7 @@
         "BlogTitle": "How to get your forth job as a self-taught programmer",
         "Image": "https://img.freepik.com/premium-photo/digital-technology-software-development-concepts-coding-programmer-software-engineer-icon_771745-647.jpg?size=626&ext=jpg&ga=GA1.1.644786062.1673853892&semt=sph",
         "AuthorImage": "https://img.freepik.com/premium-photo/man-office-work-time_917213-13787.jpg?w=740",
-        "ReadTime": "05 min read",
+        "ReadTime": "09",
         "PublishDate": "November 25 (18 Days ago)",
         "Tag":"#beginners #programming"
       }

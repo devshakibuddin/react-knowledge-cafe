@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const SideCard = () => {
+const SideCard = ({readTime}) => {
+    const [time,setTime] = useState(readTime);
+
+    useEffect(()=>{
+        const getTimeFromStorage = localStorage.getItem("readTime");
+        setTime(getTimeFromStorage);
+    },[readTime])
+
+    
     return (
-        <div className='mt-5 px-2'>
-            <h4>Spent time on read : </h4>
+       <>
+         <div className='my-5 p-2 card '>
+            <h4>Spent time on read : {time} min </h4>
         </div>
+        <div className='card p-3'>
+            <h3>Bookmarked Blogs : </h3>
+        </div>
+       </>
     );
 };
 

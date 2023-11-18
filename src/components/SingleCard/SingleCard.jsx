@@ -1,8 +1,11 @@
 import React from 'react';
 import '../SingleCard/SingleCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
-const SingleCard = ({ blog }) => {
-    console.log(blog);
+
+const SingleCard = ({ blog, handleReadTime, handleTittle }) => {
+    // console.log(blog);
     const { Image, AuthorImage, AuthorName, PublishDate, ReadTime,BlogTitle, Tag } = blog;
     return (
         <>
@@ -10,8 +13,8 @@ const SingleCard = ({ blog }) => {
                 <img src={Image} className="card-img-top" alt="..."/>
                     <div className="card-body">
                     <div>
-                        <div className='d-flex justify-content-between '>
-                            <div className='d-flex justify-content-start gap-3' >
+                        <div className='d-flex justify-content-between align-items-center'>
+                            <div className='d-flex justify-content-start gap-3 align-items-center' >
                                 <div>
                                     <img className='rounded-circle author-image' src={AuthorImage} alt="" />
                                 </div>
@@ -20,14 +23,15 @@ const SingleCard = ({ blog }) => {
                                     <p>{PublishDate}</p>
                                 </div>
                             </div>
-                        <div>
-                            <p>{ReadTime}</p>
+                        <div className='d-flex align-items-center gap-3'>
+                            <p>{ReadTime} min read</p>
+                            <button onClick={()=>handleTittle(BlogTitle)}><FontAwesomeIcon icon={faBookmark} /></button>
                         </div>
-                        </div>
+                    </div>
                 </div>
                     <h1 className="card-title">{BlogTitle}</h1>
                         <p className="card-text">{Tag}</p>
-                        <a href="#" className="">Mark as read</a>
+                        <a onClick={()=>handleReadTime(ReadTime)} href="#" className="">Mark as read</a>
                     </div>
             </div>
         </>
