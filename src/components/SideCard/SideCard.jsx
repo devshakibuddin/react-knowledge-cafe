@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const SideCard = ({readTime}) => {
+const SideCard = ({readTime, tittle}) => {
+    // console.log(tittle);
     const [time,setTime] = useState(readTime);
 
     useEffect(()=>{
@@ -8,7 +9,9 @@ const SideCard = ({readTime}) => {
         setTime(getTimeFromStorage);
     },[readTime])
 
-    
+
+
+
     return (
        <>
          <div className='my-5 p-2 card '>
@@ -16,6 +19,7 @@ const SideCard = ({readTime}) => {
         </div>
         <div className='card p-3'>
             <h3>Bookmarked Blogs : </h3>
+            <h5 className='card p-2'>{tittle}</h5>
         </div>
        </>
     );

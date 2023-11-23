@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import SideCard from './components/SideCard/SideCard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -23,14 +25,34 @@ function App() {
      }
   }
 
+
+
+  
+
+
+  const [tittle,setTittle] = useState([]);
   const handleTittle = (tittle) =>{
-    const getTittleFromLS = localStorage.getItem(tittle)
-    if (getTittleFromLS) {
-      console.log('already exist');
+
+    let GetTitle = {};
+    const quantity = GetTitle[tittle];
+    if (quantity) {
+      const newQuantity = quantity + 1;
+      GetTitle[tittle] = newQuantity;
     }
     else{
-      localStorage.setItem(tittle,1);
+      GetTitle[tittle] =1;
     }
+    localStorage.setItem('get-title', JSON.stringify(GetTitle));
+
+
+    // const getTittleFromLS = localStorage.getItem(tittle)
+    // if (getTittleFromLS) {
+    //   toast("Already exist!");
+    // }
+    // else{
+    //   localStorage.setItem(tittle,1);
+    //   setTittle(tittle)
+    // }
     
   }
 
@@ -42,9 +64,10 @@ function App() {
           <Home handleReadTime={handleReadTime} handleTittle={handleTittle}></Home>
         </div>
         <div className="sideCard-container col-md-4 card">
-          <SideCard readTime={readTime}></SideCard>
+          <SideCard readTime={readTime} tittle={tittle} ></SideCard>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </>
   )
 }
