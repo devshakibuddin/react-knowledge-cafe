@@ -32,27 +32,14 @@ function App() {
 
   const [tittle,setTittle] = useState([]);
   const handleTittle = (tittle) =>{
-
-    let GetTitle = {};
-    const quantity = GetTitle[tittle];
-    if (quantity) {
-      const newQuantity = quantity + 1;
-      GetTitle[tittle] = newQuantity;
+    const getTittleFromLS = localStorage.getItem(tittle)
+    if (getTittleFromLS) {
+      toast("Already exist!");
     }
     else{
-      GetTitle[tittle] =1;
+      localStorage.setItem(tittle,1);
+      setTittle(tittle)
     }
-    localStorage.setItem('get-title', JSON.stringify(GetTitle));
-
-
-    // const getTittleFromLS = localStorage.getItem(tittle)
-    // if (getTittleFromLS) {
-    //   toast("Already exist!");
-    // }
-    // else{
-    //   localStorage.setItem(tittle,1);
-    //   setTittle(tittle)
-    // }
     
   }
 
